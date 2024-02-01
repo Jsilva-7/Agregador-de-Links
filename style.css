@@ -1,0 +1,171 @@
+*{
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255,255,255,0.1);
+  --surface-color-hover: rgba(0,0,0,0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/MoonStars.svg);
+}
+.light{
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0,0,0,0.5);
+  --surface-color: rgba(0,0,0,0.05);
+  --surface-color-hover: rgba(0,0,0,0.020);
+  --highlight-color: rgba(0,0,0,0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body{
+    /*
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size: cover;
+    
+*/
+
+/*background: color image repeat position/size */
+background: var(--bg-url) no-repeat top
+center/cover;
+}
+
+body *{
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+#container{
+    width: 360px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+    }
+
+    #profile{
+      text-align: center;
+      padding: 24px;
+    }
+
+    #profile img { /* aq mexemos no tamanho da imagen, que seria a foto de perfil*/
+      
+      width: 112px; 
+      }
+        
+      #profile p{
+      font-weight: 400;
+      font-size: 16px;/* tamanho da fonte*/
+      margin-top: 8px;/* aq seria o espaço acima do elemento, se eu aumento, ira ir para baixo*/
+    }
+    #switch{
+      position: relative;
+      width: 64px;
+
+      margin: 4px auto;
+    }
+
+    #switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    }
+    
+    #switch button {
+      left: 0;
+      right: initial;
+    }
+    
+    .light #switch button {
+      left: initial;
+      right: 0;
+    }
+
+    /* caso de algum problema no futuro, é so eu colocar este codigo no lugar deste dois acima.(seria problema no botao, em ir para um lado e para outro
+    .light #switch button {
+  right: 0;
+  left: initial;
+}*/
+   
+  #switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Reduzi o gap (espaçamento) entre os itens da lista */
+    padding: 14px 0;
+  }
+    ul li a {/* aq eu mexo em geral na edição geral da lista, como cor, alinhamento, tudo*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 16px 24px;/*A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas*/
+
+      background: var(--surface-color);
+      border:1px solid var(--stroke-color);
+      border-radius: 8px;
+
+      backdrop-filter: blur (4px);/*permite que você aplique efeitos gráficos, como desfoque ou mudança de cores, na área ao fundo de um elemento*/
+      -webkit-backdrop-filter: blur(4px);
+      text-decoration: none; /*decoração do texto inserido na pagina*/
+      font-weight: 500;/* font-weight especifica o peso ou a intensidade da fonte */
+      transition: background 0.2s;
+    }
+    ul li a:hover{/*   O :hover possibilita um elemento ter o seu estilo alterado através da ação do usuário, quando o próprio passa o cursor do mouse sobre o elemento.*/
+      background:var(--surface-color-hover);
+      border:1.5px solid var(--text-color);
+    }
+    #social-links{
+    display: flex;
+    justify-content: center;
+    
+    
+    padding: 24px 0;
+
+    font-size: 24px;
+   }
+
+   #social-links a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 16px;
+   
+   transition: background 0.2s;
+   border-radius: 50%;
+   }
+
+   #social-links a:hover{
+   background: var(--highlight-color);
+   }
+   footer{
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+   }
+   
+    
