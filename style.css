@@ -43,7 +43,8 @@ body *{
 }
 
 #container{
-    width: 360px;
+    width: 100%px;
+    max-width: 588px;
     margin: 56px auto 0px;
     padding: 0 24px;
     }
@@ -162,10 +163,9 @@ body *{
    #social-links a:hover{
    background: var(--highlight-color);
    }
-   footer{
+   footer {
+    width: 100%;
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
-   }
-   
-    
+}
