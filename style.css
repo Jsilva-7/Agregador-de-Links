@@ -95,7 +95,7 @@ body *{
     
     
     .light #switch button {
-      animation: slide-in 0,4s forwards;
+      animation: slide-in 0.4s forwards;
     }
 
     /* caso de algum problema no futuro, é so eu colocar este codigo no lugar deste dois acima.(seria problema no botao, em ir para um lado e para outro
