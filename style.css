@@ -85,17 +85,20 @@ body *{
     z-index: 1;
     transform: translateY(-50%);
 
-    animation: slide-back 0.2s; 
+    animation: slide-back 0.2s;
     }
     
-    #switch button:hover{
-      outline: 8px var(--highlight-color);
+    #switch button {
+      left: 0;
+      right: initial;
     }
-    
-    
     
     .light #switch button {
       animation: slide-in 0.4s forwards;
+    }
+
+    #switch buttom:hover{
+      outline: 8px solid var(--highlight-color); 
     }
 
     /* caso de algum problema no futuro, é so eu colocar este codigo no lugar deste dois acima.(seria problema no botao, em ir para um lado e para outro
@@ -191,11 +194,12 @@ body *{
     left: 50%;
   }
 }
+
 @keyframes slide-back{
-  from {
-    left: 50%;
-  }
-  to{
-    left: 0;
-  }
+ from{
+   left: 50%;
+ }
+ to {
+  left:0;
+ }
 }
